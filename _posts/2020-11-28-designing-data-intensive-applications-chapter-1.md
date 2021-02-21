@@ -14,7 +14,19 @@ In the book, the author presented several approaches for improving reliability a
 
 **Scalability**
 
-It should be possible to scale up or down the scope and capacity of the application based on needs.
+This term describes the application's ability to handle an increasing amount of load. Before we try to optimize it, it is extremely important to be able to clearly define the type and parameters of 'load' placed on the application. 
+
+
+***Load***
+
+Taking Twitter as an example, one user can be followed by many users, and they in turn, are followed by more users. When one user posts a tweet, it must also be distributed to and updated on the home timeline for all of his/her followers. This 'fan-out' structure makes up the load challenge for Twitter, therefore distributions like followers per user along with tweet frequencies are their key load parameters.
+
+
+***Performance***
+
+Once the load has been established, we could go about investigating the influence on performance when the load increases. Being able to process tens of thousands of requests per second concurrently with minimal response time is one type of challenge; handling data with a throughput of ten gigabytes per second is another. 
+
+How we measure performance it is as important as choosing the right metric. Taking response time as an example, measuring in __percentiles__ gives us the expected performance as well as worst case scenarios, but measuring as average time would give us way less usable information. Therefore, on the *Service Level Agreements* at data service vendors, where the agreed-upon level of expected performance is stated,  __percentiles__ are often used. 
 
 **Maintainability**
 

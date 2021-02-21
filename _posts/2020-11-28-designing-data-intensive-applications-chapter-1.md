@@ -30,4 +30,16 @@ How we measure performance it is as important as choosing the right metric. Taki
 
 **Maintainability**
 
-The majority of the time spent on any application during its lifecycle is for maintenance.
+The majority of the cost spent on any application during its lifecycle is for maintenance - operational, correction of bugs, development of new features, adapting to new platforms etc. The author mentions three design principles that can improve maintainability:
+
+***Operability***
+
+It should be well-documented and easy for operators to configure, run, debug and start/restart the application. 
+
+***Simplicity***
+
+One should always aim at reducing the complexity and improving the readability of their code. This allows other developers to understand the system quicker. Simple code also brings the benefits of fewer bugs created. 
+
+***Evolvability***
+
+There always exists a possibility for code changes as the requirement changes, hence it is important to maintain the code as adaptable as possible for future development. 
